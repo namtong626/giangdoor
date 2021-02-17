@@ -14,7 +14,7 @@
                             $settings=DB::table('settings')->get();
                         @endphp
                         <p class="text">@foreach($settings as $data) {{$data->short_des}} @endforeach</p>
-                        <p class="call">Got Question? Call us 24/7<span><a
+                        <p class="call">Liên hệ chúng tôi 24/7<span><a
                                     href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span>
                         </p>
                     </div>
@@ -23,13 +23,13 @@
                 <div class="col-lg-2 col-md-6 col-12">
                     <!-- Single Widget -->
                     <div class="single-footer links">
-                        <h4>Information</h4>
+                        <h4>Thông tin</h4>
                         <ul>
-                            <li><a href="{{route('about-us')}}">About Us</a></li>
-                            <li><a href="#">Faq</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="{{route('contact')}}">Contact Us</a></li>
-                            <li><a href="#">Help</a></li>
+                            <li><a href="{{route('about-us')}}">Giới thiệu</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Điều khoản dịch vụ</a></li>
+                            <li><a href="{{route('contact')}}">Liên hệ</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
                         </ul>
                     </div>
                     <!-- End Single Widget -->
@@ -37,13 +37,13 @@
                 <div class="col-lg-2 col-md-6 col-12">
                     <!-- Single Widget -->
                     <div class="single-footer links">
-                        <h4>Customer Service</h4>
+                        <h4>Dịch vụ khách hàng</h4>
                         <ul>
-                            <li><a href="#">Payment Methods</a></li>
-                            <li><a href="#">Money-back</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Phương thức thanh toán</a></li>
+                            <li><a href="#">Hoàn tiền</a></li>
+                            <li><a href="#">Hoàn trả</a></li>
+                            <li><a href="#">Giao hàng</a></li>
+                            <li><a href="#">Chính sách riêng tư</a></li>
                         </ul>
                     </div>
                     <!-- End Single Widget -->
@@ -51,7 +51,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <!-- Single Widget -->
                     <div class="single-footer social">
-                        <h4>Get In Tuch</h4>
+                        <h4>Liên lạc</h4>
                         <!-- Single Widget -->
                         <div class="contact">
                             <ul>
@@ -75,8 +75,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-12">
                         <div class="left">
-                            <p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Prajwal
-                                    Rai</a> - All Rights Reserved.</p>
+                            <p>Copyright © {{date('Y')}} <a href="javacript" target="_blank">GeminSoft</a> - All Rights Reserved.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">

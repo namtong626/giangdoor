@@ -23,7 +23,7 @@
                     <!-- Top Right -->
                     <div class="right-content">
                         <ul class="list-main">
-                            <li><i class="ti-location-pin"></i> <a href="{{route('order.track')}}">Track Order</a></li>
+{{--                            <li><i class="ti-location-pin"></i> <a href="{{route('order.track')}}">Track Order</a></li>--}}
                             {{-- <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li> --}}
                             @auth
                                 @if(Auth::user()->role=='admin')
@@ -33,11 +33,11 @@
                                     <li><i class="ti-user"></i> <a href="{{route('user')}}"
                                                                    target="_blank">Dashboard</a></li>
                                 @endif
-                                <li><i class="ti-power-off"></i> <a href="{{route('user.logout')}}">Logout</a></li>
+                                <li><i class="ti-power-off"></i> <a href="{{route('user.logout')}}">Đăng xuất</a></li>
 
                             @else
-                                <li><i class="ti-power-off"></i><a href="{{route('login.form')}}">Login /</a> <a
-                                        href="{{route('register.form')}}">Register</a></li>
+                                <li><i class="ti-power-off"></i><a href="{{route('login.form')}}">Đăng nhập /</a> <a
+                                        href="{{route('register.form')}}">Đăng ký</a></li>
                             @endauth
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
                         <!-- Search Form -->
                         <div class="search-top">
                             <form class="search-form">
-                                <input type="text" placeholder="Search here..." name="search">
+                                <input type="text" placeholder="Tìm kiếm..." name="search">
                                 <button value="search" type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>
@@ -79,14 +79,14 @@
                     <div class="search-bar-top">
                         <div class="search-bar">
                             <select>
-                                <option>All Category</option>
+                                <option>Tất cả danh mục</option>
                                 @foreach(Helper::getAllCategory() as $cat)
                                     <option>{{$cat->title}}</option>
                                 @endforeach
                             </select>
                             <form method="POST" action="{{route('product.search')}}">
                                 @csrf
-                                <input name="search" placeholder="Search Products Here....." type="search">
+                                <input name="search" placeholder="Tìm sản phẩm..." type="search">
                                 <button class="btnn" type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>
@@ -196,18 +196,18 @@
                                     <div class="nav-inner">
                                         <ul class="nav main-menu menu navbar-nav">
                                             <li class="{{Request::path()=='home' ? 'active' : ''}}"><a
-                                                    href="{{route('home')}}">Home</a></li>
+                                                    href="{{route('home')}}">Trang chủ</a></li>
                                             <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a
-                                                    href="{{route('about-us')}}">About Us</a></li>
+                                                    href="{{route('about-us')}}">Giới thiệu</a></li>
                                             <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif">
-                                                <a href="{{route('product-grids')}}">Products</a><span
+                                                <a href="{{route('product-grids')}}">Sản phẩm</a><span
                                                     class="new">New</span></li>
                                             {{Helper::getHeaderCategory()}}
                                             <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a
-                                                    href="{{route('blog')}}">Blog</a></li>
+                                                    href="{{route('blog')}}">Bài viết</a></li>
 
                                             <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a
-                                                    href="{{route('contact')}}">Contact Us</a></li>
+                                                    href="{{route('contact')}}">Liên hệ</a></li>
                                         </ul>
                                     </div>
                                 </div>

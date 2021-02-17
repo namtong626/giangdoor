@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','E-SHOP || HOME PAGE')
+@section('title','Cửa cuốn Bằng Giang')
 @section('main-content')
 <!-- Slider Area -->
 <section class="hero-slider">
@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Trending Item</h2>
+                        <h2>Sản phẩm thịnh hành</h2>
                     </div>
                 </div>
             </div>
@@ -170,8 +170,8 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+                                                <span>{{number_format($after_discount)}}$</span>
+                                                <del style="padding-left:4%;">{{number_format($product->price)}}$</del>
                                             </div>
                                         </div>
                                     </div>
@@ -227,7 +227,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>Hot Item</h2>
+                    <h2>Sản phẩm HOT</h2>
                 </div>
             </div>
         </div>
@@ -261,11 +261,11 @@
                             <div class="product-content">
                                 <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                                 <div class="product-price">
-                                    <span class="old">${{number_format($product->price,2)}}</span>
+                                    <span class="old">{{number_format($product->price)}}vnd</span>
                                     @php
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                     @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
+                                    <span>{{number_format($after_discount)}}vnd</span>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>Sản phẩm mới nhất</h1>
                         </div>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
                                     <div class="content">
                                         <h4 class="title"><a href="#">{{$product->title}}</a></h4>
-                                        <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                        <p class="price with-discount">{{number_format($product->discount)}}vnd</p>
                                     </div>
                                 </div>
                                 </div>
@@ -371,7 +371,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>From Our Blog</h2>
+                    <h2>Blog của chúng tôi</h2>
                 </div>
             </div>
         </div>
@@ -406,8 +406,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-rocket"></i>
-                    <h4>Free shiping</h4>
-                    <p>Orders over $100</p>
+                    <h4>Miễn phí vận chuyển</h4>
+                    <p>Dặt hàng hơn {{number_format(10000000)}}</p>
                 </div>
                 <!-- End Single Service -->
             </div>
@@ -415,8 +415,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-reload"></i>
-                    <h4>Free Return</h4>
-                    <p>Within 30 days returns</p>
+                    <h4>Miễn phí hoàn trả</h4>
+                    <p>Hoàn trả trong 30 ngày</p>
                 </div>
                 <!-- End Single Service -->
             </div>
@@ -424,8 +424,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-lock"></i>
-                    <h4>Sucure Payment</h4>
-                    <p>100% secure payment</p>
+                    <h4>Bảo mật thanh toán</h4>
+                    <p>100% bảo mật thanh toán</p>
                 </div>
                 <!-- End Single Service -->
             </div>
@@ -433,8 +433,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-tag"></i>
-                    <h4>Best Peice</h4>
-                    <p>Guaranteed price</p>
+                    <h4>Giá tốt nhất</h4>
+                    <p>Đảm bảo giá</p>
                 </div>
                 <!-- End Single Service -->
             </div>
